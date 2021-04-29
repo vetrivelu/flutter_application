@@ -33,10 +33,10 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
-  /// `Search for restaurants or foods`
+  /// `Search for restaurants`
   String get search_for_restaurants_or_foods {
     return Intl.message(
-      'Search for restaurants or foods',
+      'Search for restaurants',
       name: 'search_for_restaurants_or_foods',
       desc: '',
       args: [],

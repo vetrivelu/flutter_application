@@ -57,10 +57,10 @@ class _PagesWidgetState extends State<PagesWidget> {
           widget.currentPage = NotificationsWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
         case 1:
-          widget.currentPage = MapWidget(parentScaffoldKey: widget.scaffoldKey, routeArgument: widget.routeArgument);
+          widget.currentPage = HomeWidget(parentScaffoldKey: widget.scaffoldKey);
           break;
         case 2:
-          widget.currentPage = HomeWidget(parentScaffoldKey: widget.scaffoldKey);
+          widget.currentPage = MapWidget(parentScaffoldKey: widget.scaffoldKey, routeArgument: widget.routeArgument);
           break;
         case 3:
           widget.currentPage = OrdersWidget(parentScaffoldKey: widget.scaffoldKey);
@@ -104,7 +104,7 @@ class _PagesWidgetState extends State<PagesWidget> {
               label: '',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.location_on),
+              icon: Icon(Icons.home),
               label: '',
             ),
             BottomNavigationBarItem(
@@ -122,7 +122,7 @@ class _PagesWidgetState extends State<PagesWidget> {
                       BoxShadow(color: Theme.of(context).accentColor.withOpacity(0.4), blurRadius: 13, offset: Offset(0, 3))
                     ],
                   ),
-                  child: new Icon(Icons.home, color: Theme.of(context).primaryColor),
+                  child: new Icon(Icons.location_pin, color: Theme.of(context).primaryColor),
                 )),
             BottomNavigationBarItem(
               icon: new Icon(Icons.fastfood),

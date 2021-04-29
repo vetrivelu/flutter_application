@@ -82,7 +82,8 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                   return e;
                 }).toList(),
                 name: _con.restaurant.name);
-            widget.currentPage = ChatWidget(parentScaffoldKey: widget.scaffoldKey, routeArgument: RouteArgument(id: _con.restaurant.id, param: _conversation));
+            widget.currentPage =
+                ChatWidget(parentScaffoldKey: widget.scaffoldKey, routeArgument: RouteArgument(id: _con.restaurant.id, param: _conversation));
           }
           break;
         case 2:
@@ -107,7 +108,7 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
             boxShadow: [BoxShadow(color: Theme.of(context).hintColor.withOpacity(0.10), offset: Offset(0, -4), blurRadius: 10)],
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               IconButton(
                 icon: Icon(
@@ -119,26 +120,29 @@ class _DetailsWidgetState extends StateMVC<DetailsWidget> {
                   this._selectTab(0);
                 },
               ),
-              IconButton(
-                icon: Icon(
-                  Icons.chat,
-                  size: widget.currentTab == 1 ? 28 : 24,
-                  color: widget.currentTab == 1 ? Theme.of(context).accentColor : Theme.of(context).focusColor,
-                ),
-                onPressed: () {
-                  this._selectTab(1);
-                },
+              SizedBox(
+                width: 30,
               ),
-              IconButton(
-                icon: Icon(
-                  Icons.directions,
-                  size: widget.currentTab == 2 ? 28 : 24,
-                  color: widget.currentTab == 2 ? Theme.of(context).accentColor : Theme.of(context).focusColor,
-                ),
-                onPressed: () {
-                  this._selectTab(2);
-                },
-              ),
+              // IconButton(
+              //   icon: Icon(
+              //     Icons.chat,
+              //     size: widget.currentTab == 1 ? 28 : 24,
+              //     color: widget.currentTab == 1 ? Theme.of(context).accentColor : Theme.of(context).focusColor,
+              //   ),
+              //   onPressed: () {
+              //     this._selectTab(1);
+              //   },
+              // ),
+              // IconButton(
+              //   icon: Icon(
+              //     Icons.directions,
+              //     size: widget.currentTab == 2 ? 28 : 24,
+              //     color: widget.currentTab == 2 ? Theme.of(context).accentColor : Theme.of(context).focusColor,
+              //   ),
+              //   onPressed: () {
+              //     this._selectTab(2);
+              //   },
+              // ),
               FlatButton(
                 onPressed: () {
                   this._selectTab(3);
