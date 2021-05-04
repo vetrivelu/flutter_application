@@ -47,7 +47,7 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
           valueListenable: settingsRepo.setting,
           builder: (context, value, child) {
             return Text(
-              value.appName ?? S.of(context).home,
+              "Dezo",
               style: Theme.of(context).textTheme.headline6.merge(TextStyle(letterSpacing: 1.3)),
             );
           },
@@ -123,8 +123,9 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                                 child: Text(
                                   S.of(context).delivery,
                                   style: TextStyle(
-                                      color:
-                                          settingsRepo.deliveryAddress.value?.address == null ? Theme.of(context).hintColor : Theme.of(context).primaryColor),
+                                      color: settingsRepo.deliveryAddress.value?.address == null
+                                          ? Theme.of(context).hintColor
+                                          : Theme.of(context).primaryColor),
                                 ),
                               ),
                             ),
@@ -146,8 +147,9 @@ class _HomeWidgetState extends StateMVC<HomeWidget> {
                                 child: Text(
                                   S.of(context).pickup,
                                   style: TextStyle(
-                                      color:
-                                          settingsRepo.deliveryAddress.value?.address != null ? Theme.of(context).hintColor : Theme.of(context).primaryColor),
+                                      color: settingsRepo.deliveryAddress.value?.address != null
+                                          ? Theme.of(context).hintColor
+                                          : Theme.of(context).primaryColor),
                                 ),
                               ),
                             ),
